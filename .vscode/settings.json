@@ -1,0 +1,38 @@
+{
+    "java.project.sourcePaths": [
+        "src",
+        "dependencies"
+    ],
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "c:\\Program Files\\Zebra FXSeries Host Java SDK\\RFID\\bin\\Symbol.RFID.API3.jar",
+            "dependencies/mysql-connector-java.jar",
+            "dependencies/selenium-api-4.6.0-sources.jar",
+            "dependencies/selenium-chrome-driver-4.6.0-sources.jar",
+            "dependencies/selenium-chromium-driver-4.6.0-sources.jar",
+            "dependencies/selenium-devtools-v85-4.6.0-sources.jar",
+            "dependencies/selenium-devtools-v105-4.6.0-sources.jar",
+            "dependencies/selenium-devtools-v106-4.6.0-sources.jar",
+            "dependencies/selenium-devtools-v107-4.6.0-sources.jar",
+            "dependencies/selenium-edge-driver-4.6.0-sources.jar",
+            "dependencies/selenium-firefox-driver-4.6.0-sources.jar",
+            "dependencies/selenium-http-4.6.0-sources.jar",
+            "dependencies/selenium-ie-driver-4.6.0-sources.jar",
+            "dependencies/selenium-java-4.6.0-sources.jar",
+            "dependencies/selenium-json-4.6.0-sources.jar",
+            "dependencies/selenium-manager-4.6.0-sources.jar",
+            "dependencies/selenium-remote-driver-4.6.0-sources.jar",
+            "dependencies/selenium-safari-driver-4.6.0-sources.jar",
+            "dependencies/selenium-support-4.6.0-sources.jar",
+            "dependencies/json.simple.jar",
+            "dependencies/aws-mysql-jdbc-1.1.2.jar",
+            "dependencies/c3p0-0.9.0.jar",
+            "test-lib\\**\\*.jar"
+        ],
+        "exclude": [
+            "dependencies/selenium-api-4.6.0.jar",
+            "dependencies/selenium-chromium-driver-4.6.0.jar"
+        ]
+    }
+}
