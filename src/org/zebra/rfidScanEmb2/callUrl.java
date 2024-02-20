@@ -1,13 +1,18 @@
 package org.zebra.rfidScanEmb2;
-
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class callUrl extends Thread {
-
+public class callUrl extends Thread {        
+    String urlEndPoint ;
     String assetCode;
     boolean respondWeb = false;
-
+    
+    public String getUrlEndPoint(){
+        return urlEndPoint;
+    }
+    public void setUrlEndPoint(String urlEndPoint) {
+        this.urlEndPoint = urlEndPoint;
+    }
     public boolean respondWeb() {
         return respondWeb;
     }
@@ -27,8 +32,8 @@ public class callUrl extends Thread {
 
     public synchronized void callWebSite(){
         try {
-            URL url = new URL("http://dev-dsk-davsuar-2b-a59798a1.us-west-2.amazon.com:5000/api/newread?scannerCode="
-                    + assetCode);
+            URL url = new URL(urlEndPoint+"/api/newread?scannerCode="+ assetCode);
+            System.out.println("url "+url);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
             System.out.println("value returned by the web server " + con.getResponseCode());            
@@ -43,5 +48,6 @@ public class callUrl extends Thread {
             System.out.println(e);
             setrespondWeb(false);
         }
+        System.out.println("Terminating thread callWebSite");
     }
 }

@@ -34,9 +34,11 @@ public class Alarm extends Thread{
         try {           
             reader.Config.GPO.setPortState(red, enable);
             reader.Config.GPO.setPortState(alarm, enable);
-            Thread.sleep(2000);            
+            System.out.println("Buzzer activate");
+            Thread.sleep(4000);            
             reader.Config.GPO.setPortState(red, disable);
             reader.Config.GPO.setPortState(alarm, disable);
+            System.out.println("Buzzer desactivated");
             scan.setBuzzerActivated(false);
         } catch (InvalidUsageException e) {
             // TODO Auto-generated catch block
@@ -52,6 +54,7 @@ public class Alarm extends Thread{
         catch (IllegalThreadStateException e) {
             // TODO Auto-generated catch block            
             e.printStackTrace();
-        } 
+        }
+        System.out.println("Terminating thread alarmSound"); 
     }
 }

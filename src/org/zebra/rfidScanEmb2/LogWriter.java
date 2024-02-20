@@ -1,11 +1,8 @@
 package org.zebra.rfidScanEmb2;
-
 import java.io.FileWriter;
-import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 
 public class LogWriter extends Thread  {
 
@@ -55,7 +52,7 @@ public class LogWriter extends Thread  {
                 System.out.println("Im deleting this whole program " + z);
             }
         }
-        System.out.println("Terminating thread");
+        System.out.println("Terminating thread LogWriter");
     }
 
     public void addNewTagRadio(String tags) throws InterruptedException{
